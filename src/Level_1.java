@@ -1,6 +1,6 @@
 public class Level_1 {
     // Tìm số có tồn tại không
-    // [1, 3, 5, 7, 9]
+    // [1, 3, 5, 7, 9, 10, 15]
     // + Method 1:
     // Trả về true/false
     // target = 5
@@ -65,7 +65,7 @@ public class Level_1 {
 
     public static void main(String[] args){
 
-        int[] arr = {1, 3, 5, 7,  9};
+        int[] arr = {1, 3, 5, 7, 9, 10, 15};
         int target = 5;
 
         if (containsTarget(arr, target)){

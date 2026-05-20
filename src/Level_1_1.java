@@ -4,7 +4,7 @@ public class Level_1_1 {
     // + Dùng method để tự gọi chính nó chứ không dùng for hay while
     // + Phải có điều kiện dừng
     // Tìm số có tồn tại không
-    // [1, 3, 5, 7, 9]
+    // [1, 3, 5, 7, 9, 10, 15]
     // + Method 1:
     // Trả về true/false
     // target = 7
@@ -26,7 +26,9 @@ public class Level_1_1 {
 
             if (arr[mid] < target){
                 return containsTarget(arr, mid + 1, right, target);
-            }else{
+            }
+
+            if (arr[mid] > target){
                 return containsTarget(arr, left, mid - 1, target);
             }
 
@@ -48,7 +50,9 @@ public class Level_1_1 {
 
             if (arr[mid] < target){
                 return findTargetIndex(arr, mid + 1, right, target);
-            }else{
+            }
+
+            if (arr[mid] > target){
                 return findTargetIndex(arr, left, mid - 1, target);
             }
 
@@ -60,7 +64,7 @@ public class Level_1_1 {
 
     public static void main(String[] args){
 
-        int[] arr = {1, 3, 5, 7,  9};
+        int[] arr = {1, 3, 5, 7, 9, 10, 15};
         int target = 5;
         int r = arr.length - 1;
 
